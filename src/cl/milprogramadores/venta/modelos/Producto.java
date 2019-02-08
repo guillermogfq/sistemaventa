@@ -208,4 +208,10 @@ public class Producto {
         
         return lista;
     }
+    
+    public Object toArray() {
+        Object[] array = {idproducto, nombre, descripcion, stock, stock_min, getPrecio()};
+        return array;
+    }    
+    
 }
