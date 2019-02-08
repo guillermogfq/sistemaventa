@@ -5,6 +5,7 @@
  */
 package cl.milprogramadores.venta.controladores;
 
+import cl.milprogramadores.venta.vistas.MedioPagoUI;
 import cl.milprogramadores.venta.vistas.VentaUI;
 
 /**
@@ -14,12 +15,18 @@ import cl.milprogramadores.venta.vistas.VentaUI;
 public class ControladorSistema {
     
     private VentaUI ventaUI;
+    private MedioPagoUI mediopagoUI;
 
     public ControladorSistema() {
         ventaUI = new VentaUI();
+        mediopagoUI = new MedioPagoUI();
     }
     
     public void iniciar(){
         ventaUI.setVisible(true);
+        mediopagoUI.setVisible(true);
+       
+        
+    
     }
 }
