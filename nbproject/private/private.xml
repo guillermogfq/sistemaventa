@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/controladores/ControladorSistema.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/SistemaVenta.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/modelos/Producto.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/coneccion/Conexion.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/modelos/Venta.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/modelos/ProductoVenta.java</file>
+            <file>file:/C:/Users/SENCE%20VESPERTINO/sistemaventa/src/cl/milprogramadores/venta/vistas/VentaUI.java</file>
+        </group>
+    </open-files>
 </project-private>

@@ -85,8 +85,6 @@ public class VentaUI extends javax.swing.JFrame {
 
         jLabel3.setText("Cantidad");
 
-        cantidad.setText("jTextField1");
-
         agregar.setText("Agregar Producto");
 
         limpiar.setText("Limpiar");
