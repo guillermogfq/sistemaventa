@@ -204,6 +204,7 @@ public class Producto {
 
         } catch (SQLException ex) {
             lista = new ArrayList<>();
+            System.out.println(lista);
         }
         
         return lista;
