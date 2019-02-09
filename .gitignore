@@ -1,1 +1,7 @@
-src/cl/milprogramadores/coneccion/Conexion.java
+/src/cl/milprogramadores/coneccion/Conexion.java
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
