@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import javax.swing.JTextField;
 
 /**
  *
@@ -43,6 +44,10 @@ public class Producto {
         this.descripcion = descripcion;
         this.stock = stock;
         this.stock_min = stock_min;
+    }
+
+    public Producto(JTextField idproducto, JTextField nombre, JTextField descripcion, JTextField stock, JTextField stock_min) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public Integer getIdproducto() {
