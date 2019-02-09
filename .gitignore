@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /src/cl/milprogramadores/coneccion/Conexion.java
 
 ### NetBeans ###
@@ -5,3 +6,7 @@
 /build/
 /nbbuild/
 /dist/
+=======
+src/cl/milprogramadores/coneccion/Conexion.java
+/dist/
+>>>>>>> origin/msepulveda

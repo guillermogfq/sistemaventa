@@ -6,6 +6,7 @@
 package cl.milprogramadores.venta.modelos;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 /**
  *
@@ -61,5 +62,13 @@ public class Venta {
     
     public boolean borrar(){
         return false;
+    }
+    
+    public static ArrayList<Venta> obtnerTodos(){
+        return null;
+    }
+    
+    public static Venta buscar(Integer id){
+        return null;
     }
 }

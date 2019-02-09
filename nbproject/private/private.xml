@@ -25,11 +25,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Jaime%20Ibarra/Desktop/proyecto/sistemaventa/src/cl/milprogramadores/venta/coneccion/Conexion.java</file>
             <file>file:/C:/Users/Jaime%20Ibarra/Desktop/proyecto/sistemaventa/src/cl/milprogramadores/venta/modelos/DetalleVenta.java</file>
             <file>file:/C:/Users/Jaime%20Ibarra/Desktop/proyecto/sistemaventa/src/cl/milprogramadores/venta/SistemaVenta.java</file>
             <file>file:/C:/Users/Jaime%20Ibarra/Desktop/proyecto/sistemaventa/src/cl/milprogramadores/venta/modelos/MedioPago.java</file>
             <file>file:/C:/Users/Jaime%20Ibarra/Desktop/proyecto/sistemaventa/src/cl/milprogramadores/venta/modelos/Venta.java</file>
+=======
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/coneccion/Conexion.java</file>
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/controladores/ControladorSistema.java</file>
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/vistas/ProductoUI.java</file>
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/modelos/MedioPago.java</file>
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/SistemaVenta.java</file>
+            <file>file:/C:/Users/NiKo/Desktop/sistemaventa/src/cl/milprogramadores/venta/vistas/MedioPagoUI.java</file>
+>>>>>>> origin/msepulveda
         </group>
     </open-files>
 </project-private>
