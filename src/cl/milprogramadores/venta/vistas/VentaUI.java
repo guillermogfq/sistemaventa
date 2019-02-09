@@ -98,6 +98,11 @@ public class VentaUI extends javax.swing.JFrame {
         jLabel4.setText("Medio Pago");
 
         jButton1.setText("Mantenedor Productos");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         historico.setText("Historico de Ventas");
 
@@ -172,6 +177,12 @@ public class VentaUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ProductoUI prod = new ProductoUI();
+        prod.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

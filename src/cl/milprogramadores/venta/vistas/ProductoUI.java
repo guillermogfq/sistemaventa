@@ -5,17 +5,42 @@
  */
 package cl.milprogramadores.venta.vistas;
 
+import cl.milprogramadores.venta.modelos.Producto;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author guillermofuentesquijada
  */
 public class ProductoUI extends javax.swing.JFrame {
 
+    Producto prod;
+
     /**
      * Creates new form ProductoUI
      */
     public ProductoUI() {
         initComponents();
+        mostrarProductos();
+        WindowListener exitListener = new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int confirm = JOptionPane.showOptionDialog(
+                        null, "¿Volver a Sistema de Ventas?",
+                        "Volver", JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE, null, null, null);
+                if (confirm == 0) {
+                    VentaUI venta = new VentaUI();
+                    venta.setVisible(true);
+                }
+            }
+        };
+        addWindowListener(exitListener);
     }
 
     /**
@@ -170,4 +195,23 @@ public class ProductoUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
+
+    private void mostrarProductos() {
+        ArrayList<Producto> lista = Producto.obtenerTodos();
+
+        String[] cabecera = {"ID", "Nombre", "Descripción", "Stock", "Stock Minimo", "Precio"};
+
+        int cantFilas = lista.size();
+
+        Object[][] datos = new Object[cantFilas][];
+
+        for (int i = 0; i < cantFilas; i++) {
+            datos[i] = (Object[]) lista.get(i).toArray();
+        }
+
+        DefaultTableModel model = new DefaultTableModel(datos, cabecera);
+
+        jTable1.setModel(model);
+    }
+    
 }

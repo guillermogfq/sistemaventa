@@ -103,7 +103,6 @@ public class Producto {
                     Timestamp fecha = resultado.getTimestamp("fecha");
                     precio = new Precio(id, monto, fecha.toLocalDateTime(), this);
                 }
-                
             } catch (SQLException ex) {
                 precio = null;
             }
@@ -199,7 +198,7 @@ public class Producto {
                 Integer stock = resultado.getInt("stock");
                 Integer stock_min = resultado.getInt("stock_min");
                 
-                lista.add(new Producto(stock, nombre, descripcion, stock, stock_min));
+                lista.add(new Producto(id, nombre, descripcion, stock, stock_min));
             }
 
         } catch (SQLException ex) {
@@ -209,6 +208,12 @@ public class Producto {
         return lista;
     }
     
+
+    public Object toArray() {
+        Object[] array = {idproducto, nombre, descripcion, stock, stock_min, getPrecio().getMonto()};
+        return array;
+    }    
+
     public static Producto buscar(Integer idprod){
         Producto producto = null;
         try{
@@ -226,7 +231,7 @@ public class Producto {
                 Integer stock = resultado.getInt("stock");
                 Integer stock_min = resultado.getInt("stock_min");
                 
-                producto = new Producto(stock, nombre, descripcion, stock, stock_min);
+                producto = new Producto(id, nombre, descripcion, stock, stock_min);
             }
 
         } catch (SQLException ex) {
