@@ -21,7 +21,7 @@ public class Conexion {
     private static Conexion _this;
 
     private final String tableName = "u531602409_venta";
-    private final String host = "sql175.main-host.eu";
+    private final String host = "sql175.main-hosting.eu";
     private final String userDB = "u531602409_root";
     private final String passDB = "root1234";
 
