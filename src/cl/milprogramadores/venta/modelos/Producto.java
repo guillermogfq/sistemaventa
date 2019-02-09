@@ -208,4 +208,31 @@ public class Producto {
         
         return lista;
     }
+    
+    public static Producto buscar(Integer idprod){
+        Producto producto = null;
+        try{
+                
+            Connection conn = Conexion.getConexion().getConn();
+            String query = "SELECT * FROM " + NOMBRE_TABLA + " WHERE " + CLAVE_PRIMARIA + " = ?";
+            PreparedStatement sttm = conn.prepareStatement(query);
+            sttm.setInt(1, idprod);
+            ResultSet resultado = sttm.executeQuery();
+            
+            if(resultado.next()){
+                Integer id = resultado.getInt("idproducto");
+                String nombre = resultado.getString("nombre");
+                String descripcion = resultado.getString("descripcion");
+                Integer stock = resultado.getInt("stock");
+                Integer stock_min = resultado.getInt("stock_min");
+                
+                producto = new Producto(stock, nombre, descripcion, stock, stock_min);
+            }
+
+        } catch (SQLException ex) {
+            producto = null;
+        }
+        
+        return producto;
+    }
 }

@@ -7,14 +7,21 @@ package cl.milprogramadores.venta;
 
 import cl.milprogramadores.venta.controladores.ControladorSistema;
 
+
+
 /**
  *
  * @author guillermofuentesquijada
  */
 public class SistemaVenta {
-    
+
     public static void main(String[] args) {
+            
+        
         ControladorSistema controlador = new ControladorSistema();
         controlador.iniciar();
     }
-}
+    
+   
+   
+    }
