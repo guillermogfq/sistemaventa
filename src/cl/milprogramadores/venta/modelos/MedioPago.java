@@ -151,6 +151,30 @@ public class MedioPago {
     public String toString() {
         return "MedioPago{" + "idmediopago=" + idmediopago + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
+    
+    public static MedioPago buscar(Integer idm){
+       MedioPago medio = null;
+        try{
+                
+            Connection conn = Conexion.getConexion().getConn();
+            String query = "SELECT * FROM " + NOMBRE_TABLA + " WHERE " + CLAVE_PRIMARIA + " = ?";
+            PreparedStatement sttm = conn.prepareStatement(query);
+            sttm.setInt(1, idm);
+            ResultSet resultado = sttm.executeQuery();
+            
+            if(resultado.next()){
+                Integer id = resultado.getInt("idmediopago");
+                String nombre = resultado.getString("nombre");
+                String descripcion = resultado.getString("descripcion");
+                medio = new MedioPago(id, nombre, descripcion);
+            }
+
+        } catch (SQLException ex) {
+            medio = null;
+        }
+        
+        return medio;
+    }
 
 }
 
