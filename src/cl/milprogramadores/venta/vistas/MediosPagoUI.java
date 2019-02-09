@@ -5,42 +5,15 @@
  */
 package cl.milprogramadores.venta.vistas;
 
-import cl.milprogramadores.venta.coneccion.Conexion;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author NiKo
  */
 public class MediosPagoUI extends javax.swing.JFrame {
 
- 
-
-    
-   // conn  = Conexion.getConexion().getConn();
-     public void guardarMedioPago(){  
-    /**
-     * Creates new form MediosPagoUI
-     */}
     public MediosPagoUI() {
         initComponents();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
 
     /**
@@ -65,8 +38,6 @@ public class MediosPagoUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablamedioPago = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setText("Idmediopago");
 
@@ -177,7 +148,6 @@ public class MediosPagoUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jGuardarActionPerformed
-    guardarMedioPago();
     }//GEN-LAST:event_jGuardarActionPerformed
 
 
@@ -197,5 +167,4 @@ public class MediosPagoUI extends javax.swing.JFrame {
     private javax.swing.JTextField nombreMediopago;
     // End of variables declaration//GEN-END:variables
 
- 
 }

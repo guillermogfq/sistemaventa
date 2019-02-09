@@ -5,9 +5,11 @@
  */
 package cl.milprogramadores.venta.vistas;
 
+import cl.milprogramadores.venta.modelos.MedioPago;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,7 +17,8 @@ import javax.swing.JOptionPane;
  * @author guillermofuentesquijada
  */
 public class VentaUI extends javax.swing.JFrame {
-
+    private ArrayList<MedioPago> lista_medios;
+    private MediosPagoUI medUI;
     /**
      * Creates new form VentaUI
      */
@@ -34,6 +37,13 @@ public class VentaUI extends javax.swing.JFrame {
             }
         };
         addWindowListener(exitListener);
+        medUI = new MediosPagoUI();
+        lista_medios = MedioPago.obtenerTodos();
+        medios.removeAllItems();
+        
+        for(MedioPago med : lista_medios){
+            medios.addItem(med.getNombre());
+        }
     }
 
     /**
@@ -55,10 +65,11 @@ public class VentaUI extends javax.swing.JFrame {
         agregar = new javax.swing.JButton();
         limpiar = new javax.swing.JButton();
         vender = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        medios = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         historico = new javax.swing.JButton();
+        mant_medios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
@@ -98,11 +109,11 @@ public class VentaUI extends javax.swing.JFrame {
 
         vender.setText("Finalizar Venta");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        medios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Medio Pago");
 
-        jButton1.setText("Mantenedor Productos");
+        jButton1.setText("Mantenedor de Productos");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -110,6 +121,13 @@ public class VentaUI extends javax.swing.JFrame {
         });
 
         historico.setText("Historico de Ventas");
+
+        mant_medios.setText("Mantenedor de Medios de Pago");
+        mant_medios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mant_mediosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,10 +151,11 @@ public class VentaUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(medios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(vender, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(mant_medios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(vender, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(98, 393, Short.MAX_VALUE)
                                 .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -169,10 +188,12 @@ public class VentaUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(medios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(vender)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(vender)
+                    .addComponent(mant_medios))
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -195,13 +216,16 @@ public class VentaUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_agregarActionPerformed
 
+    private void mant_mediosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mant_mediosActionPerformed
+        medUI.setVisible(true);
+    }//GEN-LAST:event_mant_mediosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregar;
     private javax.swing.JTextField cantidad;
     private javax.swing.JButton historico;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -209,6 +233,8 @@ public class VentaUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton limpiar;
+    private javax.swing.JButton mant_medios;
+    private javax.swing.JComboBox<String> medios;
     private javax.swing.JComboBox<String> productos;
     private javax.swing.JButton vender;
     // End of variables declaration//GEN-END:variables

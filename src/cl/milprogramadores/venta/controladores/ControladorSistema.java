@@ -25,19 +25,16 @@ import java.util.logging.Logger;
 public class ControladorSistema {
     private Connection conn;
        
-    private VentaUI ventaUI;
-    private MediosPagoUI mediopagoUI;
+    private final VentaUI ventaUI;
 
     public ControladorSistema() {
         conn = Conexion.getConexion().getConn();
         ventaUI = new VentaUI();
-        mediopagoUI =  new MediosPagoUI();
         
     }
     
     public void iniciar(){
         ventaUI.setVisible(true);
-        mediopagoUI.setVisible(true);
     } 
      
 }
