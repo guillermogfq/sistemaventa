@@ -201,7 +201,6 @@ public class CrearProductos extends javax.swing.JFrame {
         String descripcion = (String) (descripcion1.getText());
         Integer stock = Integer.parseInt(stock1.getText());
         Integer stock_min = Integer.parseInt(stock_min1.getText());
-        Integer precio
 
         Producto producto = new Producto(nombre, descripcion, stock, stock_min);
         producto.guardar();
