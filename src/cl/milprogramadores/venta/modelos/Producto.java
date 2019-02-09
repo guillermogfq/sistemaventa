@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**
@@ -115,7 +116,8 @@ public class Producto {
     }
 
     public void setPrecio(Integer monto) {
-
+        Precio precio_nuevo = new Precio(monto, LocalDateTime.now(), this);
+        precio_nuevo.guardar();
     }
 
     public boolean guardar() {
