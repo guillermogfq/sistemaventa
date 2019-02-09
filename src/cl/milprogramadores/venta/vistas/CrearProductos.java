@@ -5,17 +5,7 @@
  */
 package cl.milprogramadores.venta.vistas;
 
-import cl.milprogramadores.venta.coneccion.Conexion;
-import static cl.milprogramadores.venta.modelos.Producto.CLAVE_PRIMARIA;
-import static cl.milprogramadores.venta.modelos.Producto.NOMBRE_TABLA;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -173,12 +163,10 @@ public class CrearProductos extends javax.swing.JFrame {
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
+               
         Integer idproducto1 = Integer.parseInt(idproducto)+"";
         String nombre1 = (String) (nombre.getText());
         String descripcion1 = (String) (descripcion.getText());
-        
         int stock1 = Integer.parseInt(stock.getText());
         int stock_min1 = Integer.parseInt(stock_min.getText());
 
@@ -187,10 +175,10 @@ public class CrearProductos extends javax.swing.JFrame {
            
             ControladorSistema.xxx(registro);
             cargarDatos();
-            mos_nombre.setText("");
+            
             
             JOptionPane.showMessageDialog(null, "El Reistro se Realizo Correctamente");
-            grabarRegistro.setEnabled(true);
+            guardar.setEnabled(true);
             
 
        
