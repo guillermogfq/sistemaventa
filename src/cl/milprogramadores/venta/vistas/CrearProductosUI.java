@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author DivalUser
  */
-public class CrearProductos extends javax.swing.JFrame {
+public class CrearProductosUI extends javax.swing.JFrame {
 
     /**
      * Creates new form CrearProductos
      */
-    public CrearProductos() {
+    public CrearProductosUI() {
         initComponents();
     }
 

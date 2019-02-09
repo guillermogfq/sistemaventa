@@ -214,7 +214,7 @@ public class ProductoUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         CrearProductos CrearP = new CrearProductos();
+         CrearProductosUI CrearP = new CrearProductosUI();
         CrearP.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

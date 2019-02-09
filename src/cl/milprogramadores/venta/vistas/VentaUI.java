@@ -190,7 +190,7 @@ public class VentaUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
-        CrearProductos CrearP = new CrearProductos();
+        CrearProductosUI CrearP = new CrearProductosUI();
         CrearP.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_agregarActionPerformed
